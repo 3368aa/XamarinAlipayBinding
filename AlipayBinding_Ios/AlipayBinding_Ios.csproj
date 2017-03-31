@@ -35,7 +35,6 @@
     <Reference Include="Xamarin.iOS" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Native References\AlipaySDK.framework\" />
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
@@ -47,6 +46,17 @@
     <NativeReference Include="Native References/AlipaySDK.framework">
       <Kind>Framework</Kind>
     </NativeReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Native References\AlipaySDK.framework\AlipaySDK" />
+    <BundleResource Include="Native References\AlipaySDK.framework\en.lproj\InfoPlist.strings" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Native References\AlipaySDK.framework\Info.plist" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Native References\AlipaySDK.framework\Headers\AlipaySDK.h" />
+    <Content Include="Native References\AlipaySDK.framework\Headers\APayAuthInfo.h" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>
