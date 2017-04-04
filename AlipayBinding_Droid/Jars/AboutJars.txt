@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Android.Runtime;
-using Java.Lang;
 
 namespace Com.Alipay.Android.Phone.Mrpc.Core {
 
@@ -190,18 +189,18 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 		public unsafe RpcException (string p0)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (this.Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p0 = JNIEnv.NewString (p0);
 			try {
 				JValue* __args = stackalloc JValue [1];
 				__args [0] = new JValue (native_p0);
-				if (GetType () != typeof (RpcException)) {
+				if (((object) this).GetType () != typeof (RpcException)) {
 					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/String;)V", __args),
+							global::Android.Runtime.JNIEnv.StartCreateInstance (((object) this).GetType (), "(Ljava/lang/String;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/String;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (this.Handle, "(Ljava/lang/String;)V", __args);
 					return;
 				}
 
@@ -210,19 +209,19 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_String_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_String_, __args);
+				JNIEnv.FinishCreateInstance (this.Handle, class_ref, id_ctor_Ljava_lang_String_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p0);
 			}
 		}
 
-        static IntPtr id_ctor_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Throwable_;
+		static IntPtr id_ctor_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Throwable_;
 		// Metadata.xml XPath constructor reference: path="/api/package[@name='com.alipay.android.phone.mrpc.core']/class[@name='RpcException']/constructor[@name='RpcException' and count(parameter)=3 and parameter[1][@type='java.lang.Integer'] and parameter[2][@type='java.lang.String'] and parameter[3][@type='java.lang.Throwable']]"
 		[Register (".ctor", "(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Throwable;)V", "")]
 		public unsafe RpcException (global::Java.Lang.Integer p0, string p1, global::Java.Lang.Throwable p2)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (this.Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p1 = JNIEnv.NewString (p1);
@@ -231,11 +230,11 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 				__args [0] = new JValue (p0);
 				__args [1] = new JValue (native_p1);
 				__args [2] = new JValue (p2);
-				if (GetType () != typeof (RpcException)) {
+				if (((object) this).GetType () != typeof (RpcException)) {
 					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Throwable;)V", __args),
+							global::Android.Runtime.JNIEnv.StartCreateInstance (((object) this).GetType (), "(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Throwable;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Throwable;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (this.Handle, "(Ljava/lang/Integer;Ljava/lang/String;Ljava/lang/Throwable;)V", __args);
 					return;
 				}
 
@@ -244,7 +243,7 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Throwable_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Throwable_, __args);
+				JNIEnv.FinishCreateInstance (this.Handle, class_ref, id_ctor_Ljava_lang_Integer_Ljava_lang_String_Ljava_lang_Throwable_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p1);
 			}
@@ -256,18 +255,18 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 		public unsafe RpcException (global::Java.Lang.Integer p0, global::Java.Lang.Throwable p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (this.Handle != IntPtr.Zero)
 				return;
 
 			try {
 				JValue* __args = stackalloc JValue [2];
 				__args [0] = new JValue (p0);
 				__args [1] = new JValue (p1);
-				if (GetType () != typeof (RpcException)) {
+				if (((object) this).GetType () != typeof (RpcException)) {
 					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Integer;Ljava/lang/Throwable;)V", __args),
+							global::Android.Runtime.JNIEnv.StartCreateInstance (((object) this).GetType (), "(Ljava/lang/Integer;Ljava/lang/Throwable;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/Integer;Ljava/lang/Throwable;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (this.Handle, "(Ljava/lang/Integer;Ljava/lang/Throwable;)V", __args);
 					return;
 				}
 
@@ -276,7 +275,7 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Integer_Ljava_lang_Throwable_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_Integer_Ljava_lang_Throwable_, __args);
+				JNIEnv.FinishCreateInstance (this.Handle, class_ref, id_ctor_Ljava_lang_Integer_Ljava_lang_Throwable_, __args);
 			} finally {
 			}
 		}
@@ -287,7 +286,7 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 		public unsafe RpcException (global::Java.Lang.Integer p0, string p1)
 			: base (IntPtr.Zero, JniHandleOwnership.DoNotTransfer)
 		{
-			if (Handle != IntPtr.Zero)
+			if (this.Handle != IntPtr.Zero)
 				return;
 
 			IntPtr native_p1 = JNIEnv.NewString (p1);
@@ -295,11 +294,11 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 				JValue* __args = stackalloc JValue [2];
 				__args [0] = new JValue (p0);
 				__args [1] = new JValue (native_p1);
-				if (GetType () != typeof (RpcException)) {
+				if (((object) this).GetType () != typeof (RpcException)) {
 					SetHandle (
-							global::Android.Runtime.JNIEnv.StartCreateInstance (GetType (), "(Ljava/lang/Integer;Ljava/lang/String;)V", __args),
+							global::Android.Runtime.JNIEnv.StartCreateInstance (((object) this).GetType (), "(Ljava/lang/Integer;Ljava/lang/String;)V", __args),
 							JniHandleOwnership.TransferLocalRef);
-					global::Android.Runtime.JNIEnv.FinishCreateInstance (Handle, "(Ljava/lang/Integer;Ljava/lang/String;)V", __args);
+					global::Android.Runtime.JNIEnv.FinishCreateInstance (this.Handle, "(Ljava/lang/Integer;Ljava/lang/String;)V", __args);
 					return;
 				}
 
@@ -308,7 +307,7 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 				SetHandle (
 						global::Android.Runtime.JNIEnv.StartCreateInstance (class_ref, id_ctor_Ljava_lang_Integer_Ljava_lang_String_, __args),
 						JniHandleOwnership.TransferLocalRef);
-				JNIEnv.FinishCreateInstance (Handle, class_ref, id_ctor_Ljava_lang_Integer_Ljava_lang_String_, __args);
+				JNIEnv.FinishCreateInstance (this.Handle, class_ref, id_ctor_Ljava_lang_Integer_Ljava_lang_String_, __args);
 			} finally {
 				JNIEnv.DeleteLocalRef (native_p1);
 			}
@@ -339,10 +338,10 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 					id_getCode = JNIEnv.GetMethodID (class_ref, "getCode", "()I");
 				try {
 
-					if (GetType () == ThresholdType)
-						return JNIEnv.CallIntMethod (Handle, id_getCode);
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.CallIntMethod (this.Handle, id_getCode);
 					else
-						return JNIEnv.CallNonvirtualIntMethod (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCode", "()I"));
+						return JNIEnv.CallNonvirtualIntMethod (this.Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getCode", "()I"));
 				} finally {
 				}
 			}
@@ -373,10 +372,10 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 					id_getMsg = JNIEnv.GetMethodID (class_ref, "getMsg", "()Ljava/lang/String;");
 				try {
 
-					if (GetType () == ThresholdType)
-						return JNIEnv.GetString (JNIEnv.CallObjectMethod (Handle, id_getMsg), JniHandleOwnership.TransferLocalRef);
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (this.Handle, id_getMsg), JniHandleOwnership.TransferLocalRef);
 					else
-						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMsg", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (this.Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getMsg", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -425,10 +424,10 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 					id_getOperationType = JNIEnv.GetMethodID (class_ref, "getOperationType", "()Ljava/lang/String;");
 				try {
 
-					if (GetType () == ThresholdType)
-						return JNIEnv.GetString (JNIEnv.CallObjectMethod (Handle, id_getOperationType), JniHandleOwnership.TransferLocalRef);
+					if (((object) this).GetType () == ThresholdType)
+						return JNIEnv.GetString (JNIEnv.CallObjectMethod (this.Handle, id_getOperationType), JniHandleOwnership.TransferLocalRef);
 					else
-						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOperationType", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
+						return JNIEnv.GetString (JNIEnv.CallNonvirtualObjectMethod (this.Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "getOperationType", "()Ljava/lang/String;")), JniHandleOwnership.TransferLocalRef);
 				} finally {
 				}
 			}
@@ -442,10 +441,10 @@ namespace Com.Alipay.Android.Phone.Mrpc.Core {
 					JValue* __args = stackalloc JValue [1];
 					__args [0] = new JValue (native_value);
 
-					if (GetType () == ThresholdType)
-						JNIEnv.CallVoidMethod (Handle, id_setOperationType_Ljava_lang_String_, __args);
+					if (((object) this).GetType () == ThresholdType)
+						JNIEnv.CallVoidMethod (this.Handle, id_setOperationType_Ljava_lang_String_, __args);
 					else
-						JNIEnv.CallNonvirtualVoidMethod (Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setOperationType", "(Ljava/lang/String;)V"), __args);
+						JNIEnv.CallNonvirtualVoidMethod (this.Handle, ThresholdClass, JNIEnv.GetMethodID (ThresholdClass, "setOperationType", "(Ljava/lang/String;)V"), __args);
 				} finally {
 					JNIEnv.DeleteLocalRef (native_value);
 				}
